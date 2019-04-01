@@ -230,7 +230,7 @@
       xsqy_tab(m)%wrf_label = 'j_no2'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/YLD/NO2_jpl11.yld'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/YLD/NO2_jpl11.yld'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 25
       subr(m)%xsqy_sub   => r02
@@ -244,10 +244,10 @@
       xsqy_tab(m+1)%channel = 2
       xsqy_tab(m:m+1)%tpflag = 1
       xsqy_tab(m)%filespec%nfiles = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/NO3_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/NO3_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 6
       xsqy_tab(m)%filespec%nread(1) = 289
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/YLD/NO3_jpl2011.qy'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/YLD/NO3_jpl2011.qy'
       xsqy_tab(m)%filespec%nskip(2) = 5
       xsqy_tab(m)%filespec%nread(2) = 56
       xsqy_tab(m)%filespec%xfac(2)  = 1.e-3
@@ -263,8 +263,8 @@
       xsqy_tab(m+1)%channel = 2
       xsqy_tab(m:m+1)%tpflag = 1
       xsqy_tab(m)%filespec%nfiles = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/N2O5_jpl11.abs'
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/ABS/N2O5_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/N2O5_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/ABS/N2O5_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1:2) = (/ 4,111 /)
       xsqy_tab(m)%filespec%nread(1:2) = (/ 103,8 /)
       subr(m)%xsqy_sub   => r04
@@ -274,7 +274,7 @@
       xsqy_tab(m)%label = 'HNO2 -> OH + NO'
       xsqy_tab(m)%wrf_label = 'j_hno2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HONO_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HONO_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 192
       subr(m)%xsqy_sub   => no_z_dep
@@ -284,7 +284,7 @@
       xsqy_tab(m)%wrf_label = 'j_hno3'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HNO3_burk.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HNO3_burk.abs'
       xsqy_tab(m)%filespec%nskip(1) = 6
       xsqy_tab(m)%filespec%nread(1) = 83
       subr(m)%xsqy_sub   => r06
@@ -293,7 +293,7 @@
       xsqy_tab(m)%label = 'HNO4 -> HO2 + NO2'
       xsqy_tab(m)%wrf_label = 'j_hno4'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HNO4_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HNO4_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 54
       subr(m)%xsqy_sub   => no_z_dep
@@ -304,8 +304,8 @@
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
       xsqy_tab(m)%filespec%nfiles      = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/H2O2_jpl94.abs'
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/ABS/H2O2_Kahan.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/H2O2_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/ABS/H2O2_Kahan.abs'
       xsqy_tab(m)%filespec%nskip(1:2) = (/ -1,0 /)
       xsqy_tab(m)%filespec%nread(2)   = 494
       subr(m)%xsqy_sub   => r08
@@ -315,7 +315,7 @@
       xsqy_tab(m)%wrf_label = 'j_chbr3'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CHBr3.jpl97'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CHBr3.jpl97'
       xsqy_tab(m)%filespec%nskip(1) = 6
       xsqy_tab(m)%filespec%nread(1) = 87
       subr(m)%xsqy_sub   => r09
@@ -331,8 +331,8 @@
       xsqy_tab(m+1:m+2)%channel = (/ 2,3 /)
       xsqy_tab(m:m+2)%tpflag = (/ 2,0,0 /)
       xsqy_tab(m)%filespec%nfiles = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH3CHO/CH3CHO_jpl11.abs'
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/CH3CHO/CH3CHO_uip.yld'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH3CHO/CH3CHO_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/CH3CHO/CH3CHO_uip.yld'
       xsqy_tab(m)%filespec%nskip(1:2) = (/ 2,4 /)
       xsqy_tab(m)%filespec%nread(1:2) = (/ 101,12 /)
       subr(m)%xsqy_sub   => r11
@@ -345,8 +345,8 @@
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 2
       xsqy_tab(m)%filespec%nfiles = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/C2H5CHO/C2H5CHO_iup.abs'
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/C2H5CHO/C2H5CHO_iup.yld'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/C2H5CHO/C2H5CHO_iup.abs'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/C2H5CHO/C2H5CHO_iup.yld'
       xsqy_tab(m)%filespec%nskip(1:2) = 4
       xsqy_tab(m)%filespec%nread(1:2) = (/ 106,5 /)
       subr(m)%xsqy_sub   => r12
@@ -361,8 +361,8 @@
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1:m+2)%channel = (/ 2,3 /)
       xsqy_tab(m)%filespec%nfiles = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CHOCHO/glyoxal_jpl11.abs'
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/CHOCHO/glyoxal_jpl11.qy'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CHOCHO/glyoxal_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/CHOCHO/glyoxal_jpl11.qy'
       xsqy_tab(m)%filespec%nskip(1:2) = (/ 2,3 /)
       xsqy_tab(m)%filespec%nread(1:2) = (/ 277,40 /)
       subr(m)%xsqy_sub   => r13
@@ -374,7 +374,7 @@
       xsqy_tab(m)%wrf_label = 'j_mgly'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH3COCHO/CH3COCHO_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH3COCHO/CH3COCHO_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 294
       subr(m)%xsqy_sub   => r14
@@ -384,7 +384,7 @@
       xsqy_tab(m)%wrf_label = 'j_ch3coch3'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 3
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH3COCH3/CH3COCH3_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH3COCH3/CH3COCH3_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 5
       xsqy_tab(m)%filespec%nread(1) = 135
       subr(m)%xsqy_sub   => r15
@@ -393,7 +393,7 @@
       xsqy_tab(m)%label = 'CH3OOH -> CH3O + OH'
       xsqy_tab(m)%wrf_label = 'j_ch3ooh'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH3OOH/CH3OOH_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH3OOH/CH3OOH_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 40
       subr(m)%xsqy_sub   => no_z_dep
@@ -403,7 +403,7 @@
       xsqy_tab(m)%wrf_label = 'j_ch3ono2'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/CH3ONO2_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/CH3ONO2_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 65
       subr(m)%xsqy_sub   => r17
@@ -416,7 +416,7 @@
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1)%channel = 2
       xsqy_tab(m:m+1)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/PAN_talukdar.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/PAN_talukdar.abs'
       xsqy_tab(m)%filespec%nskip(1) = 14
       xsqy_tab(m)%filespec%nread(1) = 78
       subr(m)%xsqy_sub   => r18
@@ -426,7 +426,7 @@
       xsqy_tab(m)%label = 'CCl2O -> Products'
       xsqy_tab(m)%wrf_label = 'j_ccl2o'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CCl2O_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CCl2O_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -435,7 +435,7 @@
       xsqy_tab(m)%wrf_label = 'j_ccl4'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CCl4_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CCl4_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 5
       xsqy_tab(m)%filespec%nread(1) = 44
       subr(m)%xsqy_sub   => r20
@@ -444,7 +444,7 @@
       xsqy_tab(m)%label = 'CClFO -> Products'
       xsqy_tab(m)%wrf_label = 'j_cclfo'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CClFO_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CClFO_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -452,7 +452,7 @@
       xsqy_tab(m)%label = 'CF2O -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf2o'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CF2O_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CF2O_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 5
       xsqy_tab(m)%filespec%nread(1) = 21
       subr(m)%xsqy_sub   => no_z_dep
@@ -462,7 +462,7 @@
       xsqy_tab(m)%wrf_label = 'j_cf2clcfcl2'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CFC-113_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CFC-113_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => r23
       m = m + 1
@@ -471,7 +471,7 @@
       xsqy_tab(m)%wrf_label = 'j_cf2clcf2cl'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CFC-114_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CFC-114_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => r24
       m = m + 1
@@ -479,7 +479,7 @@
       xsqy_tab(m)%label = 'CF3CF2Cl (CFC-115) -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf3cf2cl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CFC-115_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CFC-115_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -488,7 +488,7 @@
       xsqy_tab(m)%wrf_label = 'j_ccl3f'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CFC-11_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CFC-11_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => r26
       m = m + 1
@@ -497,7 +497,7 @@
       xsqy_tab(m)%wrf_label = 'j_ccl2f2'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CFC-12_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CFC-12_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => r27
       m = m + 1
@@ -505,7 +505,7 @@
       xsqy_tab(m)%label = 'CH3Br -> Products'
       xsqy_tab(m)%wrf_label = 'j_ch3br'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CH3Br_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CH3Br_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -514,7 +514,7 @@
       xsqy_tab(m)%wrf_label = 'j_ch3ccl3'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CH3CCl3_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CH3CCl3_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => r29
       m = m + 1
@@ -523,7 +523,7 @@
       xsqy_tab(m)%wrf_label = 'j_ch3cl'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CH3Cl_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CH3Cl_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => r30
       m = m + 1
@@ -531,7 +531,7 @@
       xsqy_tab(m)%label = 'ClOO -> Products'
       xsqy_tab(m)%wrf_label = 'j_cloo'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/ClOO_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/ClOO_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -553,7 +553,7 @@
       xsqy_tab(m)%label = 'CH3CFCl2 (HCFC-141b) -> Products'
       xsqy_tab(m)%wrf_label = 'j_ch3cfcl2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HCFC-141b_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HCFC-141b_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -568,7 +568,7 @@
       xsqy_tab(m)%label = 'CF3CF2CHCl2 (HCFC-225ca) -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf3cf2chcl2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HCFC-225ca_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HCFC-225ca_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -576,7 +576,7 @@
       xsqy_tab(m)%label = 'CF2ClCF2CHFCl (HCFC-225cb) -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf2clcf2chfcl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HCFC-225cb_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HCFC-225cb_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -585,7 +585,7 @@
       xsqy_tab(m)%wrf_label = 'j_chclf2'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HCFC-22_jpl94.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HCFC-22_jpl94.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => r38
       m = m + 1
@@ -593,7 +593,7 @@
       xsqy_tab(m)%label = 'HO2 -> OH + O'
       xsqy_tab(m)%wrf_label = 'j_ho2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HO2_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HO2_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 10
       xsqy_tab(m)%filespec%nread(1) = 15
       subr(m)%xsqy_sub   => r39
@@ -602,7 +602,7 @@
       xsqy_tab(m)%label = 'CF2Br2 (Halon-1202) -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf2bf2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Halon-1202_jpl97.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Halon-1202_jpl97.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -610,7 +610,7 @@
       xsqy_tab(m)%label = 'CF2BrCl (Halon-1211) -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf2brcl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Halon-1211_jpl97.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Halon-1211_jpl97.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -618,7 +618,7 @@
       xsqy_tab(m)%label = 'CF3Br (Halon-1301) -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf3br'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Halon-1301_jpl97.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Halon-1301_jpl97.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -626,7 +626,7 @@
       xsqy_tab(m)%label = 'CF2BrCF2Br (Halon-2402) -> Products'
       xsqy_tab(m)%wrf_label = 'j_cf2brcf2br'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Halon-2402_jpl97.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Halon-2402_jpl97.abs'
       xsqy_tab(m)%filespec%nskip(1) = -1
       subr(m)%xsqy_sub   => no_z_dep
       m = m + 1
@@ -645,7 +645,7 @@
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1)%channel = 2
       xsqy_tab(m:m+1)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/ClONO2_jpl97.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/ClONO2_jpl97.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 119
       subr(m)%xsqy_sub   => r45
@@ -658,7 +658,7 @@
       xsqy_tab(m+1)%wrf_label = 'j_brono2_b'
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1)%channel = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/BrONO2_jpl03.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/BrONO2_jpl03.abs'
       xsqy_tab(m)%filespec%nskip(1) = 13
       xsqy_tab(m)%filespec%nread(1) = 61
       subr(m)%xsqy_sub   => r46
@@ -680,7 +680,7 @@
       xsqy_tab(m+2)%wrf_label = 'j_glyald_c'
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1:m+2)%channel = (/ 2,3 /)
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH2OHCHO/glycolaldehyde_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH2OHCHO/glycolaldehyde_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 63
       subr(m)%xsqy_sub   => r101
@@ -692,7 +692,7 @@
       xsqy_tab(m)%wrf_label = 'j_biacetyl'
       xsqy_tab(m)%qyld  = .158
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH3COCOCH3/biacetyl_horowitz.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH3COCOCH3/biacetyl_horowitz.abs'
       xsqy_tab(m)%filespec%nskip(1) = 8
       xsqy_tab(m)%filespec%nread(1) = 287
       subr(m)%xsqy_sub   => no_z_dep
@@ -702,7 +702,7 @@
       xsqy_tab(m)%wrf_label = 'j_mvk'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/MVK_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/MVK_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 146
       subr(m)%xsqy_sub   => r103
@@ -712,7 +712,7 @@
       xsqy_tab(m)%wrf_label = 'j_macr'
       xsqy_tab(m)%qyld  = .01
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Methacrolein_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Methacrolein_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 7
       xsqy_tab(m)%filespec%nread(1) = 146
       subr(m)%xsqy_sub   => no_z_dep
@@ -721,7 +721,7 @@
       xsqy_tab(m)%label = 'CH3COCO(OH) -> Products'
       xsqy_tab(m)%wrf_label = 'j_ch3cocooh'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH3COCOOH/pyruvic_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH3COCOOH/pyruvic_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 139
       subr(m)%xsqy_sub   => no_z_dep
@@ -731,7 +731,7 @@
       xsqy_tab(m)%wrf_label = 'j_ch3ch2ono2'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/RONO2_talukdar.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/RONO2_talukdar.abs'
       xsqy_tab(m)%filespec%nskip(1) = 10
       xsqy_tab(m)%filespec%nread(1) = 63
       subr(m)%xsqy_sub   => r106
@@ -741,7 +741,7 @@
       xsqy_tab(m)%wrf_label = 'j_ch3chono2ch3'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/RONO2_talukdar.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/RONO2_talukdar.abs'
       xsqy_tab(m)%filespec%nskip(1) = 10
       xsqy_tab(m)%filespec%nread(1) = 63
       subr(m)%xsqy_sub   => r107
@@ -768,7 +768,7 @@
       xsqy_tab(m)%label = 'ClOOCl -> Cl + ClOO'
       xsqy_tab(m)%wrf_label = 'j_cloocl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/ClOOCl_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/ClOOCl_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 111
       subr(m)%xsqy_sub   => no_z_dep
@@ -780,7 +780,7 @@
       xsqy_tab(m+1)%wrf_label = 'j_hyac_b'
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1)%channel = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Hydroxyacetone_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Hydroxyacetone_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 96
       subr(m)%xsqy_sub   => r112
@@ -802,7 +802,7 @@
       xsqy_tab(m)%label = 'Br2 -> Br + Br'
       xsqy_tab(m)%wrf_label = 'j_br2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Br2.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Br2.abs'
       xsqy_tab(m)%filespec%nskip(1) = 6
       xsqy_tab(m)%filespec%nread(1) = 29
       xsqy_tab(m)%filespec%xfac(1)  = 1.
@@ -818,7 +818,7 @@
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1:m+2)%channel = (/ 2,3 /)
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/NO3-_CA03.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/NO3-_CA03.abs'
       xsqy_tab(m)%filespec%nskip(1) = 7
       xsqy_tab(m)%filespec%nread(1) = 43
       subr(m)%xsqy_sub   => r118
@@ -830,7 +830,7 @@
       xsqy_tab(m)%wrf_label = 'j_mek'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Martinez.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Martinez.abs'
       xsqy_tab(m)%filespec%nskip(1) = 4
       xsqy_tab(m)%filespec%nread(1) = 96
       subr(m)%xsqy_sub   => r119
@@ -843,7 +843,7 @@
       xsqy_tab(m:m+1)%tpflag  = 1
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1)%channel = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/PPN_Harwood.txt'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/PPN_Harwood.txt'
       xsqy_tab(m)%filespec%nskip(1) = 10
       xsqy_tab(m)%filespec%nread(1) = 66
       subr(m)%xsqy_sub   => r120
@@ -853,7 +853,7 @@
       xsqy_tab(m)%label = 'HOCH2OOH -> HOCH2O. + OH'
       xsqy_tab(m)%wrf_label = 'j_hoch2ooh'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HOCH2OOH_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HOCH2OOH_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 32
       subr(m)%xsqy_sub   => no_z_dep
@@ -863,7 +863,7 @@
       xsqy_tab(m)%wrf_label = 'j_acrol'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Acrolein.txt'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Acrolein.txt'
       xsqy_tab(m)%filespec%nskip(1) = 6
       xsqy_tab(m)%filespec%nread(1) = 55
       subr(m)%xsqy_sub   => r122
@@ -872,7 +872,7 @@
       xsqy_tab(m)%label = 'CH3CO(OOH) -> Products'
       xsqy_tab(m)%wrf_label = 'j_ch3coooh'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/Peracetic_acid.txt'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/Peracetic_acid.txt'
       xsqy_tab(m)%filespec%nskip(1) = 6
       xsqy_tab(m)%filespec%nread(1) = 66
       subr(m)%xsqy_sub   => no_z_dep
@@ -881,7 +881,7 @@
       xsqy_tab(m)%label = '(CH3)2NNO -> Products'
       xsqy_tab(m)%wrf_label = 'j_amine'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/dmna.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/dmna.abs'
       xsqy_tab(m)%filespec%nskip(1) = 5
       xsqy_tab(m)%filespec%nread(1) = 132
       xsqy_tab(m)%filespec%xfac(1)  = 1.e-19
@@ -902,7 +902,7 @@
       xsqy_tab(m)%label = 'ClNO2 -> Cl + NO2'
       xsqy_tab(m)%wrf_label = 'j_clno2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/ClNO2.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/ClNO2.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 26
       subr(m)%xsqy_sub   => no_z_dep
@@ -911,7 +911,7 @@
       xsqy_tab(m)%label = 'BrNO -> Br + NO'
       xsqy_tab(m)%wrf_label = 'j_brno'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/BrNO.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/BrNO.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 27
       xsqy_tab(m)%filespec%xfac(1)  = 1.
@@ -921,7 +921,7 @@
       xsqy_tab(m)%label = 'BrNO2 -> Br + NO2'
       xsqy_tab(m)%wrf_label = 'j_brno2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/BrNO2.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/BrNO2.abs'
       xsqy_tab(m)%filespec%nskip(1) = 6
       xsqy_tab(m)%filespec%nread(1) = 54
       xsqy_tab(m)%filespec%xfac(1)  = 1.
@@ -934,7 +934,7 @@
       xsqy_tab(m+1)%wrf_label = 'j_brono_b'
       xsqy_tab(m)%jndx = m
       xsqy_tab(m+1)%channel = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/BrONO.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/BrONO.abs'
       xsqy_tab(m)%filespec%nskip(1) = 8
       xsqy_tab(m)%filespec%nread(1) = 32
       subr(m)%xsqy_sub   => r129
@@ -944,7 +944,7 @@
       xsqy_tab(m)%label = 'HOCl -> HO + Cl'
       xsqy_tab(m)%wrf_label = 'j_hocl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HOCl.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HOCl.abs'
       xsqy_tab(m)%filespec%nskip(1) = 7
       xsqy_tab(m)%filespec%nread(1) = 111
       xsqy_tab(m)%filespec%xfac(1)  = 1.
@@ -956,7 +956,7 @@
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
       xsqy_tab(m)%filespec%nfiles = 2
-      xsqy_tab(m)%filespec%filename(1:2) = trim(input_data_root)//'DATAJ1/ABS/NOCl.abs'
+      xsqy_tab(m)%filespec%filename(1:2) = trim(input_data_root)//'/DATAJ1/ABS/NOCl.abs'
       xsqy_tab(m)%filespec%nskip(1:2) = (/ 7,88 /)
       xsqy_tab(m)%filespec%nread(1:2) = (/ 80,61 /)
       subr(m)%xsqy_sub   => r131
@@ -967,9 +967,9 @@
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
       xsqy_tab(m)%filespec%nfiles      = 3
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/OClO.abs'
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/ABS/OClO.abs'
-      xsqy_tab(m)%filespec%filename(3) = trim(input_data_root)//'DATAJ1/ABS/OClO.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/OClO.abs'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/ABS/OClO.abs'
+      xsqy_tab(m)%filespec%filename(3) = trim(input_data_root)//'/DATAJ1/ABS/OClO.abs'
       xsqy_tab(m)%filespec%nskip(1:3) = (/ 6,1075,2142 /)
       xsqy_tab(m)%filespec%nread(1:3) = (/ 1068,1067,1068 /)
       subr(m)%xsqy_sub   => r132
@@ -978,7 +978,7 @@
       xsqy_tab(m)%label = 'BrCl -> Br + Cl'
       xsqy_tab(m)%wrf_label = 'j_brcl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/BrCl.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/BrCl.abs'
       xsqy_tab(m)%filespec%nskip(1) = 9
       xsqy_tab(m)%filespec%nread(1) = 81
       xsqy_tab(m)%filespec%xfac(1)  = 1.
@@ -988,7 +988,7 @@
       xsqy_tab(m)%label = 'CH3(OONO2) -> CH3(OO) + NO2'
       xsqy_tab(m)%wrf_label = 'j_ch3oono2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CH3OONO2.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CH3OONO2.abs'
       xsqy_tab(m)%filespec%nskip(1) = 9
       xsqy_tab(m)%filespec%nread(1) = 26
       xsqy_tab(m)%filespec%xfac(1)  = 1.
@@ -998,7 +998,7 @@
       xsqy_tab(m)%label = 'C(CH3)3(ONO) -> C(CH3)3(O) + NO'
       xsqy_tab(m)%wrf_label = 'j_bnit2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/t-butyl-nitrite.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/t-butyl-nitrite.abs'
       xsqy_tab(m)%filespec%nskip(1) = 4
       xsqy_tab(m)%filespec%nread(1) = 96
       xsqy_tab(m)%filespec%xfac(1)  = 1.
@@ -1008,7 +1008,7 @@
       xsqy_tab(m)%label = 'ClONO -> Cl + NO2'
       xsqy_tab(m)%wrf_label = 'j_clono'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/ClONO_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/ClONO_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 34
       subr(m)%xsqy_sub   => no_z_dep
@@ -1017,7 +1017,7 @@
       xsqy_tab(m)%label = 'HCl -> H + Cl'
       xsqy_tab(m)%wrf_label = 'j_hcl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/HCl_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/HCl_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 31
       subr(m)%xsqy_sub   => no_z_dep
@@ -1031,8 +1031,8 @@
       xsqy_tab(m+1)%channel = 2
       xsqy_tab(m:m+1)%tpflag = (/ 1,3 /)
       xsqy_tab(m)%filespec%nfiles = 2
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/CH2O/CH2O_jpl11.abs'
-      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'DATAJ1/CH2O/CH2O_jpl11.yld'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/CH2O/CH2O_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(2) = trim(input_data_root)//'/DATAJ1/CH2O/CH2O_jpl11.yld'
       xsqy_tab(m)%filespec%nskip(1:2) = 4
       xsqy_tab(m)%filespec%nread(1:2) = (/ 150,112 /)
       subr(m)%xsqy_sub    => pxCH2O
@@ -1043,7 +1043,7 @@
       xsqy_tab(m)%wrf_label = 'j_ch3cooh'
       xsqy_tab(m)%qyld  = .55
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CH3COOH_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CH3COOH_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 18
       subr(m)%xsqy_sub   => no_z_dep
@@ -1052,7 +1052,7 @@
       xsqy_tab(m)%label = 'CH3OCl -> CH3O + Cl'
       xsqy_tab(m)%wrf_label = 'j_ch3ocl'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CH3OCl_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CH3OCl_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 83
       subr(m)%xsqy_sub   => no_z_dep
@@ -1062,7 +1062,7 @@
       xsqy_tab(m)%wrf_label = 'j_chcl3'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/CHCl3_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/CHCl3_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 39
       subr(m)%xsqy_sub   => r140
@@ -1072,7 +1072,7 @@
       xsqy_tab(m)%wrf_label = 'j_c2h5ono2'
       xsqy_tab(m)%jndx  = m
       xsqy_tab(m)%tpflag = 1
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/C2H5ONO2_iup2006.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/C2H5ONO2_iup2006.abs'
       xsqy_tab(m)%filespec%nskip(1) = 4
       xsqy_tab(m)%filespec%nread(1) = 32
       subr(m)%xsqy_sub   => r141
@@ -1081,7 +1081,7 @@
       xsqy_tab(m)%label = 'n-C3H7ONO2 -> C3H7O + NO2'
       xsqy_tab(m)%wrf_label = 'j_nc3h7ono2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/nC3H7ONO2_iup2006.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/nC3H7ONO2_iup2006.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 32
       subr(m)%xsqy_sub   => no_z_dep
@@ -1090,7 +1090,7 @@
       xsqy_tab(m)%label = '1-C4H9ONO2 -> 1-C4H9O + NO2'
       xsqy_tab(m)%wrf_label = 'j_1c4h9ono2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/1C4H9ONO2_iup2006.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/1C4H9ONO2_iup2006.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 32
       subr(m)%xsqy_sub   => no_z_dep
@@ -1099,7 +1099,7 @@
       xsqy_tab(m)%label = '2-C4H9ONO2 -> 2-C4H9O + NO2'
       xsqy_tab(m)%wrf_label = 'j_2c4h9ono2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/RONO2/2C4H9ONO2_iup2006.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/RONO2/2C4H9ONO2_iup2006.abs'
       xsqy_tab(m)%filespec%nskip(1) = 3
       xsqy_tab(m)%filespec%nread(1) = 15
       subr(m)%xsqy_sub   => no_z_dep
@@ -1108,7 +1108,7 @@
       xsqy_tab(m)%label = 'perfluoro 1-iodopropane -> products'
       xsqy_tab(m)%wrf_label = 'j_perfluoro'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/PF-n-iodopropane.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/PF-n-iodopropane.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 16
       subr(m)%xsqy_sub   => no_z_dep
@@ -1117,7 +1117,7 @@
       xsqy_tab(m)%label = 'I2 -> I + I'
       xsqy_tab(m)%wrf_label = 'j_i2'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/YLD/I2.qy'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/YLD/I2.qy'
       xsqy_tab(m)%filespec%nskip(1) = 4
       xsqy_tab(m)%filespec%nread(1) = 12
       subr(m)%xsqy_sub   => r146
@@ -1126,7 +1126,7 @@
       xsqy_tab(m)%label = 'IO -> I + O'
       xsqy_tab(m)%wrf_label = 'j_io'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/IO_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/IO_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 133
       subr(m)%xsqy_sub   => no_z_dep
@@ -1135,7 +1135,7 @@
       xsqy_tab(m)%label = 'IOH -> I + OH'
       xsqy_tab(m)%wrf_label = 'j_ioh'
       xsqy_tab(m)%jndx  = m
-      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'DATAJ1/ABS/IOH_jpl11.abs'
+      xsqy_tab(m)%filespec%filename(1) = trim(input_data_root)//'/DATAJ1/ABS/IOH_jpl11.abs'
       xsqy_tab(m)%filespec%nskip(1) = 2
       xsqy_tab(m)%filespec%nread(1) = 101
       subr(m)%xsqy_sub   => no_z_dep
@@ -1318,7 +1318,7 @@
       real    :: xsav(kdata)
 
       n = 25 ; nsav = 25
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/YLD/NO2_jpl11.yld', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/YLD/NO2_jpl11.yld', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1,y1=y2 )
       xsav(1:n) = x1(1:n)
       CALL add_pnts_inter2(x1,y1,yg1,kdata,n, &
@@ -1421,14 +1421,14 @@
       real    :: xsav(kdata)
 
       n = 289
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/NO3_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/NO3_jpl11.abs', &
                       skip_cnt=6,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n)*1.E-20
       CALL add_pnts_inter2(x1,y1,yg1,kdata,n, &
                            nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
 
       n = 56 ; nsav = 56
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/YLD/NO3_jpl2011.qy', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/YLD/NO3_jpl2011.qy', &
                       skip_cnt=5,rd_cnt=n,x=x,y=q1_298, &
                       y1=q1_230,y2=q1_190,y3=q2_298, &
                       y4=q2_230,y5=q2_190 )
@@ -1530,7 +1530,7 @@
 ! cross section from jpl2011, at 300 K
 
       n1 = 103
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/N2O5_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/N2O5_jpl11.abs', &
                       skip_cnt=4,rd_cnt=n1,x=x1,y=y1 )
       y1(1:n1) = y1(1:n1) * 1.E-20
       CALL add_pnts_inter2(x1,y1,yg1,kdata,n1, &
@@ -1538,7 +1538,7 @@
 
 ! read temperature dependence coefficients:
       n2 = 8
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/N2O5_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/N2O5_jpl11.abs', &
                       skip_cnt=111,rd_cnt=n2,x=x2,y=A,y1=B )
 
       CALL add_pnts_inter2(x2,B,yg2,kdata,n2, &
@@ -1601,7 +1601,7 @@
       real    :: yends(2)
 
       n1 =  83 ; nsav = 83
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/HNO3_burk.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/HNO3_burk.abs', &
                       skip_cnt=6,rd_cnt=n1,x=y1,y=y2 )
 
       x1(1:n1) = (/ (184. + real(i)*2.,i=1,n1) /)
@@ -1706,12 +1706,12 @@
 
       integer :: n1
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/H2O2_jpl94.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/H2O2_jpl94.abs', &
                       rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
       
       n1 = 494
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/H2O2_Kahan.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/H2O2_Kahan.abs', &
                       skip_cnt=0,rd_cnt=n1,x=x1(n+1:),y=y1(n+1:) )
 
       n = n + n1
@@ -1793,7 +1793,7 @@
 !sigma, cm2 = exp((0.06183-0.000241*w)*(273.-T)-(2.376+0.14757*w))
 
       n1 = 87
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CHBr3.jpl97', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CHBr3.jpl97', &
                       skip_cnt=6,rd_cnt=n1,x=x1,y=y1 )
 
       y1(1:n1) = y1(1:n1) * 1.e-20
@@ -1904,7 +1904,7 @@
       real    :: xsav(kdata)
 
       n = 101
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CH3CHO/CH3CHO_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CH3CHO/CH3CHO_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.e-20
 
@@ -1914,7 +1914,7 @@
 ! quantum yields
 
       n = 12 ; nsav = 12
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CH3CHO/CH3CHO_iup.yld', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CH3CHO/CH3CHO_iup.yld', &
                       skip_cnt=4,rd_cnt=n,x=x1,y=y2,y1=y1 )
       xsav(1:n) = x1(1:n)
     
@@ -2002,7 +2002,7 @@
       character(len=256) :: emsg
 
       n = 106
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/C2H5CHO/C2H5CHO_iup.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/C2H5CHO/C2H5CHO_iup.abs', &
                       skip_cnt=4,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.e-20
 
@@ -2012,7 +2012,7 @@
 ! quantum yields
 
       n = 5
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/C2H5CHO/C2H5CHO_iup.yld', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/C2H5CHO/C2H5CHO_iup.yld', &
                       skip_cnt=4,rd_cnt=n,x=x1,y=y1 )
 
       CALL addpnt(x1,y1,kdata,n,x1(1)*(1.-deltax),0.)
@@ -2093,7 +2093,7 @@
       real :: yends(2)
 
       n = 277
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CHOCHO/glyoxal_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CHOCHO/glyoxal_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.e-20
       yends(:) = 0.
@@ -2103,7 +2103,7 @@
 ! quantum yields
 
       n = 40 ; nsav = 40
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CHOCHO/glyoxal_jpl11.qy', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CHOCHO/glyoxal_jpl11.qy', &
                       skip_cnt=3,rd_cnt=n,x=x,y=dum,y1=y1,y2=y2,y3=y3 )
       xsav(1:n) = x(1:n)
       yends(1) = y1(1)
@@ -2195,7 +2195,7 @@
       SUBROUTINE readit
 
       n = 294
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CH3COCHO/CH3COCHO_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CH3COCHO/CH3COCHO_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.e-20
       CALL add_pnts_inter2(x1,y1,yg,kdata,n, &
@@ -2260,7 +2260,7 @@
       real    :: xsav(kdata)
 
       n = 135 ; nsav = 135
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CH3COCH3/CH3COCH3_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CH3COCH3/CH3COCH3_jpl11.abs', &
                       skip_cnt=5,rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3,y3=y4 )
       y1(1:n) = y1(1:n) * 1.e-20
       y2(1:n) = y2(1:n) * 1.e-3
@@ -2334,7 +2334,7 @@
       real    :: xsav(kdata)
 
       n = 65 ; nsav = 65
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/RONO2/CH3ONO2_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/RONO2/CH3ONO2_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1,y1=y2 )
       y1(1:n) = y1(1:n) * 1.e-20
       y2(1:n) = y2(1:n) * 1.e-3
@@ -2415,7 +2415,7 @@
       real    :: xsav(kdata)
 
       n = 78 ; nsav = 78
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/RONO2/PAN_talukdar.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/RONO2/PAN_talukdar.abs', &
                       skip_cnt=14,rd_cnt=n,x=x1,y=y1,y1=y2 )
       y1(1:n) = y1(1:n) * 1.E-20
       y2(1:n) = y2(1:n) * 1.E-3
@@ -2502,7 +2502,7 @@
 !** cross sections from JPL97 recommendation (identical to 94 data)
 
       n = 44
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CCl4_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CCl4_jpl11.abs', &
                       skip_cnt=5,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
          
@@ -2574,7 +2574,7 @@
       integer :: nsav
       real    :: xsav(kdata)
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CFC-113_jpl94.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CFC-113_jpl94.abs', &
                       rd_cnt=n,x=x1,y=y1,y1=y2 )
       y1(1:n) = y1(1:n) * 1.E-20
       y2(1:n) = y2(1:n) * 1.E-20
@@ -2655,7 +2655,7 @@
       integer :: nsav
       real    :: xsav(kdata)
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CFC-114_jpl94.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CFC-114_jpl94.abs', &
                       rd_cnt=n,x=x1,y=y1,y1=y2 )
       y1(1:n) = y1(1:n) * 1.E-20
       y2(1:n) = y2(1:n) * 1.E-20
@@ -2721,7 +2721,7 @@
       SUBROUTINE readit
 !*** cross sections from JPL97 recommendation (identical to 94 recommendation)
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CFC-11_jpl94.abs',rd_cnt=n,x=x1,y=y1 )
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CFC-11_jpl94.abs',rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
 
 !* sigma @ 298 K
@@ -2778,7 +2778,7 @@
       SUBROUTINE readit
 !*** cross sections from JPL97 recommendation (identical to 94 recommendation)
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CFC-12_jpl94.abs',rd_cnt=n,x=x1,y=y1 )
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CFC-12_jpl94.abs',rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
 
 !* sigma @ 298 K
@@ -2857,7 +2857,7 @@
       integer :: nsav
       real    :: xsav(kdata)
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CH3CCl3_jpl94.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CH3CCl3_jpl94.abs', &
                       rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3 )
       y1(1:n) = y1(1:n) * 1.E-20
       y2(1:n) = y2(1:n) * 1.E-20
@@ -2952,7 +2952,7 @@
       integer :: nsav
       real    :: xsav(kdata)
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CH3Cl_jpl94.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CH3Cl_jpl94.abs', &
                       rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3 )
       y1(1:n) = y1(1:n) * 1.E-20
       y2(1:n) = y2(1:n) * 1.E-20
@@ -3039,7 +3039,7 @@
       SUBROUTINE readit
 !*** cross section from Orlando et al., 1991
 
-      OPEN(kin,FILE=trim(input_data_root)//'DATAJ1/ABS/HCFCs_orl.abs',STATUS='OLD')
+      OPEN(kin,FILE=trim(input_data_root)//'/DATAJ1/ABS/HCFCs_orl.abs',STATUS='OLD')
       READ(kin,*) idum
       DO i = 1, idum-2
         READ(kin,*)
@@ -3114,7 +3114,7 @@
       SUBROUTINE readit
 !*** cross section from Orlando et al., 1991
 
-      OPEN(kin,FILE=trim(input_data_root)//'DATAJ1/ABS/HCFCs_orl.abs',STATUS='OLD')
+      OPEN(kin,FILE=trim(input_data_root)//'/DATAJ1/ABS/HCFCs_orl.abs',STATUS='OLD')
       READ(kin,*) idum
       idum = idum+5
       DO i = 1, idum-2
@@ -3194,7 +3194,7 @@
       SUBROUTINE readit
 !*** cross section from Orlando et al., 1991
 
-      OPEN(kin,FILE=trim(input_data_root)//'DATAJ1/ABS/HCFCs_orl.abs',STATUS='OLD')
+      OPEN(kin,FILE=trim(input_data_root)//'/DATAJ1/ABS/HCFCs_orl.abs',STATUS='OLD')
       READ(kin,*) idum
       idum = idum+10
       DO i = 1, idum-2
@@ -3290,7 +3290,7 @@
       integer :: nsav
       real    :: xsav(kdata)
 
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/HCFC-22_jpl94.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/HCFC-22_jpl94.abs', &
                       rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3,y3=y4,y4=y5 )
       y1(1:n) = y1(1:n) * 1.E-20
       y2(1:n) = y2(1:n) * 1.E-20
@@ -3377,7 +3377,7 @@
 !*** cross sections from JPL11 recommendation
 
       n = 15
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/HO2_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/HO2_jpl11.abs', &
                       skip_cnt=10,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
 
@@ -3527,7 +3527,7 @@
       real    :: xsav(kz)
 
       n = 119 ; nsav = 119
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/ClONO2_jpl97.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/ClONO2_jpl97.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3 )
       xsav(1:n) = x1(1:n)
       y1(1:n)   = y1(1:n) * 1.E-20
@@ -3592,7 +3592,7 @@
 !** cross sections from JPL03 recommendation
 
       n = 61
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/BrONO2_jpl03.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/BrONO2_jpl03.abs', &
                       skip_cnt=13,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
 
@@ -3696,7 +3696,7 @@
       SUBROUTINE readit
 
       n = 63
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CH2OHCHO/glycolaldehyde_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CH2OHCHO/glycolaldehyde_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x,y=y )
       y(1:n) = y(1:n) * 1.e-20
          
@@ -3765,7 +3765,7 @@
       SUBROUTINE readit
 
       n = 146
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/MVK_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/MVK_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x,y=y )
       y(1:n) = y(1:n) * 1.e-20
 
@@ -3830,7 +3830,7 @@
       character(len=256) :: emsg
 
       n = 63
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/RONO2/RONO2_talukdar.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/RONO2/RONO2_talukdar.abs', &
                       skip_cnt=10,rd_cnt=n,x=x1,y=wrk,y1=wrk, &
                       y2=y1,y3=y2,y4=wrk,y5=wrk )
 
@@ -3924,7 +3924,7 @@
       character(len=256) :: emsg
 
       n = 63
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/RONO2/RONO2_talukdar.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/RONO2/RONO2_talukdar.abs', &
                       skip_cnt=10,rd_cnt=n,x=x1,y=wrk, &
                       y1=wrk,y2=wrk,y3=wrk,y4=y1,y5=y2 )
 
@@ -4109,7 +4109,7 @@
       SUBROUTINE readit
 
       n = 96
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/Hydroxyacetone_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/Hydroxyacetone_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x,y=y )
       y(1:n) = y(1:n) * 1.e-20
 
@@ -4183,7 +4183,7 @@
 
       if( initialize ) then
         call check_alloc( ndx=j, nz=nw-1, nw=1 )
-        OPEN(UNIT=kin,FILE=trim(input_data_root)//'DATAJ1/ABS/BrO.jpl03',STATUS='old')
+        OPEN(UNIT=kin,FILE=trim(input_data_root)//'/DATAJ1/ABS/BrO.jpl03',STATUS='old')
         DO i = 1, 14
           READ(kin,*)
         ENDDO
@@ -4277,7 +4277,7 @@
       real :: wrk(kdata)
 
       n = 43
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/NO3-_CA03.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/NO3-_CA03.abs', &
                       skip_cnt=7,rd_cnt=n,x=x1,y=y1,y1=wrk, &
                       y2=wrk,y3=wrk,y4=wrk )
       y1(1:n) = y1(1:n) * 3.82e-21
@@ -4348,7 +4348,7 @@
 
       real :: wrk(kdata)
       n = 96
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/Martinez.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/Martinez.abs', &
                       skip_cnt=4,rd_cnt=n,x=x,y=wrk,y1=y, &
                       y2=wrk,y3=wrk )
       y(1:n) = y(1:n) * 1.e-20
@@ -4421,7 +4421,7 @@
       real    :: xsav(kdata)
 
       n = 66 ; nsav = 66
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/PPN_Harwood.txt', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/PPN_Harwood.txt', &
                       skip_cnt=10,rd_cnt=n,x=x1,y=y1,y1=y2 )
       y1(1:n) = y1(1:n) * 1.E-20
       y2(1:n) = y2(1:n) * 1E-3
@@ -4500,7 +4500,7 @@
 ! cross section from JPL 2006 (originally from Magneron et al.)
 
       n = 55
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/Acrolein.txt',skip_cnt=6,rd_cnt=n,x=x1,y=y1 )
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/Acrolein.txt',skip_cnt=6,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
  
       CALL add_pnts_inter2(x1,y1,yg,kdata,n,nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
@@ -4596,7 +4596,7 @@
       integer :: nsav
       real    :: xsav(kdata)
 
-      OPEN(UNIT=kin,FILE=trim(input_data_root)//'DATAJ1/ABS/ClO_spectrum.prn',STATUS='OLD')
+      OPEN(UNIT=kin,FILE=trim(input_data_root)//'/DATAJ1/ABS/ClO_spectrum.prn',STATUS='OLD')
       DO i = 1, 2
          READ(kin,*)
       ENDDO
@@ -4667,7 +4667,7 @@
 ! cross section from IUPAC (vol III) 2007
 
       n = 32
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/BrONO.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/BrONO.abs', &
                       skip_cnt=8,rd_cnt=n,x=x1,y=y1 )
  
       CALL add_pnts_inter2(x1,y1,yg,kdata,n, &
@@ -4748,7 +4748,7 @@
       real    :: xsav(kdata)
 
       n = 80
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/NOCl.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/NOCl.abs', &
                       skip_cnt=7,rd_cnt=n,x=x1,y=y1 )
       y223(1:n) = y1(1:n)
       y243(1:n) = y1(1:n)
@@ -4757,7 +4757,7 @@
       y323(1:n) = y1(1:n)
       y343(1:n) = y1(1:n)
       ii = 61
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/NOCl.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/NOCl.abs', &
                       skip_cnt=88,rd_cnt=ii,x=x1(n+1:),y=y223(n+1:), &
                       y1=y243(n+1:),y2=y263(n+1:),y3=y298(n+1:), &
                       y4=y323(n+1:),y5=y343(n+1:) )
@@ -4854,7 +4854,7 @@
 !Supplementary Data, as quoted at:
 !http://www.atmosphere.mpg.de/enid/26b4b5172008b02407b2e47f08de2fa1,0/Spectra/Introduction_1rr.html
 
-      OPEN(UNIT=kin,FILE=trim(input_data_root)//'DATAJ1/ABS/OClO.abs',STATUS='OLD')
+      OPEN(UNIT=kin,FILE=trim(input_data_root)//'/DATAJ1/ABS/OClO.abs',STATUS='OLD')
       DO i = 1, 6
          READ(kin,*)
       ENDDO
@@ -4971,7 +4971,7 @@
       real    :: xsav(kdata)
 
       n = 150 ; nsav = 150
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CH2O/CH2O_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CH2O/CH2O_jpl11.abs', &
                       skip_cnt=4,rd_cnt=n,x=x1,y=y298, &
                       y1=tcoef )
       y298(1:n)  = y298(1:n) * 1.e-20
@@ -4989,7 +4989,7 @@
 ! quantum yields: Read, terminate, interpolate:
 
       n = 112 ; nsav = 112
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/CH2O/CH2O_jpl11.yld', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/CH2O/CH2O_jpl11.yld', &
                       skip_cnt=4,rd_cnt=n,x=x1,y=qr,y1=qm )
       xsav(1:n) = x1(1:n)
 
@@ -5066,7 +5066,7 @@
       SUBROUTINE readit
 
       n = 39
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/CHCl3_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/CHCl3_jpl11.abs', &
                       skip_cnt=3,rd_cnt=n,x=x1,y=y1 )
       y1(1:n) = y1(1:n) * 1.E-20
       
@@ -5128,7 +5128,7 @@
       real    :: xsav(kdata)
 
       n = 32 ; nsav = 32
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/RONO2/C2H5ONO2_iup2006.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/RONO2/C2H5ONO2_iup2006.abs', &
                       skip_cnt=4,rd_cnt=n,x=x1,y=y1,y1=y2 )
       y1(1:n) = y1(1:n) * 1.e-20
       y2(1:n) = y2(1:n) * 1.e-3
@@ -5184,7 +5184,7 @@
 ! cross section from JPL2011
 
       n = 104
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/ABS/I2_jpl11.abs', &
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/I2_jpl11.abs', &
                       skip_cnt=2,rd_cnt=n,x=x,y=y )
       y(1:n) = y(1:n) * 1.e-20
       
@@ -5194,7 +5194,7 @@
 ! quantum yields 
 
       n = 12
-      CALL base_read( filespec=trim(input_data_root)//'DATAJ1/YLD/I2.qy',skip_cnt=4,rd_cnt=n,x=x,y=y )
+      CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/YLD/I2.qy',skip_cnt=4,rd_cnt=n,x=x,y=y )
       
       CALL add_pnts_inter2(x,y,yg2,kdata,n,nw,wl,xsqy_tab(j)%label,deltax,(/1.,0./))
 

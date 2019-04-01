@@ -30,13 +30,15 @@ contains
 !! | local_name | standard_name             | long_name                 | units   | rank | type      | kind      | intent | optional |
 !! |------------|---------------------------|---------------------------|---------|------|-----------|-----------|--------|----------|
 !! | nlevels    | num_levels_for_photolysis | number of column layers   | count   |    0 | integer   |           | in     | F        |
+!! ! input_root | tuv_inputdata_root        | root dir for TUV inputs   | none    |    0 | character | len=*     | in    | F        |
 !! | errmsg     | ccpp_error_message        | CCPP error message        | none    |    0 | character | len=512   | out    | F        |
 !! | errflg     | ccpp_error_flag           | CCPP error flag           | flag    |    0 | integer   |           | out    | F        |
 !!
-  subroutine tuv_photolysis_init(nlevels, errmsg, errflg)
+  subroutine tuv_photolysis_init(nlevels, input_root, errmsg, errflg)
     use params_mod, only: input_data_root
 
     integer, intent(in) :: nlevels
+    character(len=*),   intent(in ) :: input_root
     character(len=512), intent(out) :: errmsg
     integer,            intent(out) :: errflg
 
@@ -48,8 +50,8 @@ contains
     errmsg = ''
     errflg = 0
 
-    input_data_root='../../MICM_chemistry/src/tuv/inputs/'
-    xsqy_filepath = trim(input_data_root)//'wrf_tuv_xsqy.nc'
+    input_data_root = trim(input_root)
+    xsqy_filepath = trim(input_root)//'/wrf_tuv_xsqy.nc'
     full_tuv=.true.
 
     jnames(  1) = 'j_o2'
