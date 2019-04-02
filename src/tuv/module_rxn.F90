@@ -61,9 +61,9 @@
 
           INTEGER, intent(in) :: nw
           INTEGER, intent(in) :: nz
-          REAL, intent(in)    :: wl(kw), wc(kw)
-          REAL, intent(in)    :: tlev(kz)
-          REAL, intent(in)    :: airden(kz)
+          REAL, intent(in)    :: wl(:), wc(:)
+          REAL, intent(in)    :: tlev(:)
+          REAL, intent(in)    :: airden(:)
 
           INTEGER, intent(inout) :: j
         end SUBROUTINE xsqy
@@ -85,9 +85,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL,    intent(in) :: wl(kw), wc(kw)
-      REAL,    intent(in) :: airden(kz)
-      REAL,    intent(in) :: tlev(kz)
+      REAL,    intent(in) :: wl(:), wc(:)
+      REAL,    intent(in) :: airden(:)
+      REAL,    intent(in) :: tlev(:)
 
       integer, PARAMETER :: kdata=500
 
@@ -1190,9 +1190,9 @@
 
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
       INTEGER, intent(inout) :: j
 
@@ -1256,9 +1256,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 
 ! data arrays
@@ -1349,9 +1349,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       INTEGER, PARAMETER :: kdata=350
@@ -1480,9 +1480,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       INTEGER, PARAMETER :: kdata = 200
@@ -1562,9 +1562,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -1636,9 +1636,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=600
@@ -1736,9 +1736,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=200
@@ -1827,9 +1827,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=150
@@ -1949,9 +1949,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
       integer, PARAMETER :: kdata=150
 
@@ -2049,9 +2049,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=500
@@ -2135,9 +2135,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=500
@@ -2217,9 +2217,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
       integer, PARAMETER :: kdata=150
 
@@ -2293,9 +2293,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
       integer, PARAMETER :: kdata = 100
 
@@ -2364,9 +2364,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -2445,9 +2445,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -2528,9 +2528,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -2609,9 +2609,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -2689,9 +2689,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
       integer, PARAMETER :: kdata=100
 
@@ -2747,9 +2747,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -2804,9 +2804,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -2898,9 +2898,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -2992,9 +2992,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
       real, parameter :: LBar = 206.214
@@ -3069,9 +3069,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
       real, parameter :: LBar = 206.214
@@ -3146,9 +3146,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
       real, parameter :: LBar = 206.214
@@ -3226,9 +3226,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -3342,9 +3342,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -3402,9 +3402,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
       real, parameter :: A0 = 68.21023                
@@ -3469,9 +3469,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=150
@@ -3484,7 +3484,7 @@
       REAL :: xs(nz)
       real :: t(nz)
       REAL, save :: yg1(kw), yg2(kw), yg3(kw)
-      INTEGER i, iw, n, idum, chnl
+      INTEGER i, iw, idum, chnl
       INTEGER ierr
       INTEGER iz
       LOGICAL, save :: is_initialized = .false.
@@ -3523,10 +3523,9 @@
       SUBROUTINE readit
 !** cross sections from JPL97 recommendation.  Same in JPL-2011.
 
-      integer :: nsav
-      real    :: xsav(kz)
-
-      n = 119 ; nsav = 119
+      integer, parameter :: n = 119
+      real    :: xsav(n)
+      
       CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/ClONO2_jpl97.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3 )
       xsav(1:n) = x1(1:n)
@@ -3535,11 +3534,11 @@
       CALL add_pnts_inter2(x1,y1,yg1,kdata,n, &
                            nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
 
-      n = nsav ; x1(1:n) = xsav(1:n)
+      x1(1:n) = xsav(1:n)
       CALL add_pnts_inter2(x1,y2,yg2,kdata,n, &
                            nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
 
-      n = nsav ; x1(1:n) = xsav(1:n)
+      x1(1:n) = xsav(1:n)
       CALL add_pnts_inter2(x1,y3,yg3,kdata,n, &
                            nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
 
@@ -3562,9 +3561,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -3618,13 +3617,13 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
       real :: ex1(nz), ex2(nz)
-      real :: alpha(kz)
+      real :: alpha(nz)
       INTEGER iz, iw
 
       real :: aa, bb, bb2, sig
@@ -3668,9 +3667,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -3720,9 +3719,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=150
@@ -3789,9 +3788,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -3883,9 +3882,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -3975,9 +3974,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
 ! coefficients from Roberts and Fajer 1989, over 270-306 nm
@@ -4009,9 +4008,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
 ! coefficients from Roberts and Fajer 1989, over 284-335 nm
@@ -4043,9 +4042,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
 ! coefficients from Roberts and Fajer 1989, over 270-330 nm
@@ -4083,9 +4082,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -4134,9 +4133,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
       REAL    :: sig(nw)
@@ -4171,9 +4170,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! local
       INTEGER :: i, n
@@ -4226,9 +4225,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=50
@@ -4306,9 +4305,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -4375,9 +4374,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -4454,9 +4453,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=100
@@ -4523,9 +4522,9 @@
 
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
       INTEGER, intent(inout) :: j
 ! data arrays
@@ -4637,9 +4636,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=50
@@ -4691,9 +4690,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=150
@@ -4806,9 +4805,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=2000
@@ -4905,9 +4904,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
       integer, PARAMETER :: kdata=200
 
@@ -5018,9 +5017,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=50
@@ -5093,9 +5092,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata = 50
@@ -5159,9 +5158,9 @@
       INTEGER, intent(in) :: nw
       INTEGER, intent(in) :: nz
       INTEGER, intent(inout) :: j
-      REAL, intent(in)    :: wl(kw), wc(kw)
-      REAL, intent(in)    :: tlev(kz)
-      REAL, intent(in)    :: airden(kz)
+      REAL, intent(in)    :: wl(:), wc(:)
+      REAL, intent(in)    :: tlev(:)
+      REAL, intent(in)    :: airden(:)
 
 ! data arrays
       integer, PARAMETER :: kdata=200

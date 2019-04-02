@@ -6,17 +6,17 @@
 !_________________________________________________
 ! i/o file unit numbers
 ! output
-      INTEGER, PARAMETER :: kout=53
+!      INTEGER, PARAMETER :: kout=53
 ! input
       INTEGER, PARAMETER :: kin=12
 !_________________________________________________
 ! altitude, wavelength, time (or solar zenith angle) grids
 ! altitude
-      integer, PARAMETER :: kz=125
+!      integer, PARAMETER :: kz=125
 ! wavelength
       integer, PARAMETER :: kw=1000
 ! time/sza
-      integer, PARAMETER :: kt=100
+!      integer, PARAMETER :: kt=100
 !_________________________________________________
 ! number of weighting functions
 !  wavelength dependent
