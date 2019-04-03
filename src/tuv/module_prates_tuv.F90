@@ -412,13 +412,18 @@ contains
 
   contains
     subroutine handle_ncerr( ret, mes )
+#ifdef CPRNAG
+   ! NAG does not provide these as intrinsics, but it does provide modules
+   ! that implement commonly used POSIX routines.
+      use f90_unix_proc, only: abort
+#endif
       implicit none
       integer, intent(in) :: ret
       character(len=*), intent(in) :: mes
 
       if( ret /= nf90_noerr ) then
          write(*,*) 'ERROR: '//trim(mes)//trim(nf90_strerror(ret))
-         call exit(ret)
+         call abort
       end if
 
     end subroutine handle_ncerr

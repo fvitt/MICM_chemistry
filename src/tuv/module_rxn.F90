@@ -3523,8 +3523,9 @@
       SUBROUTINE readit
 !** cross sections from JPL97 recommendation.  Same in JPL-2011.
 
-      integer, parameter :: n = 119
-      real    :: xsav(n)
+      real    :: xsav(119)
+      integer :: n
+      n = 119
       
       CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/ClONO2_jpl97.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3 )
@@ -5211,7 +5212,7 @@
       real, intent(in)    :: xin(kdata)
       real, intent(in)    :: yin(kdata)
       real, intent(in)    :: yends(2)
-      real, intent(inout) :: yout(kdata)
+      real, intent(inout) :: yout(nw-1)
       character(len=*), intent(in) :: jlabel
 
       integer :: ierr, m

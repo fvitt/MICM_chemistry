@@ -702,7 +702,7 @@ wave_loop: &
           csz   = sin(rlt)*sin(rdecl) + cos(rlt)*cos(rdecl)*cos(zpt)
           csz   = min( 1._dp,csz )
           zr    = acos(csz)
-          zenith(i,j) = real( zr/d2r,4 )
+          zenith(i,j) = real( zr/d2r )
         end do
       end do
 
@@ -769,9 +769,9 @@ wave_loop: &
       REAL    :: re
       REAL    :: zd(0:nlyr)
       REAL    :: ds_dh(1:nlyr)
-      REAL(8) :: zenrad, rpsinz, rj, rjp1, dsj, dhj, ga, gb, sm
+      REAL(dp) :: zenrad, rpsinz, rj, rjp1, dsj, dhj, ga, gb, sm
 
-      zenrad = REAL( zen*dr,8 )
+      zenrad = REAL( zen*dr, dp )
 !-----------------------------------------------------------------------------
 ! include the elevation above sea level to the radius of the earth:
 !-----------------------------------------------------------------------------
@@ -794,17 +794,17 @@ wave_loop: &
 layer_loop : &
       DO k = 0, nlyr
         ds_dh(:) = 0.
-        rpsinz = real(re + zd(k),8) * SIN(zenrad)
+        rpsinz = real(re + zd(k),dp) * SIN(zenrad)
 !       IF( zen > 90.0 .AND. rpsinz < real(re,8) ) THEN
-        IF( zen <= 90.0 .or. rpsinz >= real(re,8) ) THEN
+        IF( zen <= 90.0 .or. rpsinz >= real(re,dp) ) THEN
 !-----------------------------------------------------------------------------
 ! Find index of layer in which the screening height lies
 !-----------------------------------------------------------------------------
           id = k 
           IF( zen > 90.0 ) THEN
             DO j = 1,nlyr
-              IF( rpsinz < real(zd(j-1) + re,8) .AND. &
-                  rpsinz >= real(zd(j) + re,8) ) then
+              IF( rpsinz < real(zd(j-1) + re,dp) .AND. &
+                  rpsinz >= real(zd(j) + re,dp) ) then
                 id = j
               ENDIF
             END DO
@@ -814,23 +814,23 @@ layer_loop : &
             jm1 = j - 1
 !           IF( j == id .AND. id == k .AND. zen > 90.0 ) then
             IF( j /= id .or. k /= id .or. zen <= 90.0 ) then
-              sm = 1.0_8
+              sm = 1.0_dp
             ELSE
-              sm = -1.0_8
+              sm = -1.0_dp
             ENDIF
-            rj   = real(re + zd(jm1),8)
-            rjp1 = real(re + zd(j),8)
+            rj   = real(re + zd(jm1),dp)
+            rjp1 = real(re + zd(j),dp)
             dhj  = zd(jm1) - zd(j)
  
-            ga = max( rj*rj - rpsinz*rpsinz,0.0_8 )
-            gb = max( rjp1*rjp1 - rpsinz*rpsinz,0.0_8 )
+            ga = max( rj*rj - rpsinz*rpsinz,0.0_dp )
+            gb = max( rjp1*rjp1 - rpsinz*rpsinz,0.0_dp )
 
             IF( id > k .AND. j == id ) THEN
               dsj = SQRT( ga )
             ELSE
               dsj = SQRT( ga ) - sm*SQRT( gb )
             END IF
-            ds_dh(j) = real( dsj/dhj,4 )
+            ds_dh(j) = real( dsj/dhj )
           END DO
           nid(k) = id
         ELSE

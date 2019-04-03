@@ -26,7 +26,7 @@ module tuv_photolysis
   real, parameter :: R=2.8704e6       ! gas constant (erg/g/K)
   real, parameter :: g=980.616        ! grav acceleration (cm/sec2)
 
-  real, parameter :: tuv_n_phot = 113
+  integer, parameter :: tuv_n_phot = 113
   character(len=16), parameter :: tuv_jnames(tuv_n_phot) = &
     (/'j_o2            ' &
     , 'j_o1d           ' &
@@ -186,7 +186,6 @@ contains
 !! | zenith     | solar_zenith                          | solar zenith angle             | degrees   |    0 | real      | kind_phys | in     | F        |
 !! | albedo     | surface_albedo                        | surface albedo                 | none      |    0 | real      | kind_phys | in     | F        |
 !! | press_mid  | layer_pressure                        | mid-point layer pressure       | Pa        |    1 | real      | kind_phys | in     | F        |
-!! | press_int  | layer_interface_pressure              | layer interface pressure       | Pa        |    1 | real      | kind_phys | in     | F        |
 !! | alt        | layer_altitude                        | mid-point layer altitude       | km        |    1 | real      | kind_phys | in     | F        |
 !! | temp       | layer_temperature                     | mid-point layer temperature    | K         |    1 | real      | kind_phys | in     | F        |
 !! | o2vmr      | O2_vmr_col                            | O2 volume mixing ratio column  | mole/mole |    1 | real      | kind_phys | in     | F        |
@@ -198,11 +197,10 @@ contains
 !! | errmsg     | ccpp_error_message                    | CCPP error message             | none      |    0 | character | len=512   | out    | F        |
 !! | errflg     | ccpp_error_flag                       | CCPP error flag                | flag      |    0 | integer   |           | out    | F        |
 !!
-  subroutine tuv_photolysis_run( zenith, albedo, press_mid, press_int, alt, temp, o2vmr, o3vmr, so2vmr, no2vmr, prates, o3totcol, errmsg, errflg )
+  subroutine tuv_photolysis_run( zenith, albedo, press_mid, alt, temp, o2vmr, o3vmr, so2vmr, no2vmr, prates, o3totcol, errmsg, errflg )
 
     real(rk), intent(in) :: zenith
     real(rk), intent(in) :: albedo
-    real(rk), intent(in) :: press_int(:)
     real(rk), intent(in) :: press_mid(:)
     real(rk), intent(in) :: alt(:)  ! km
     real(rk), intent(in) :: temp(:) ! K
@@ -217,7 +215,6 @@ contains
 
     real :: zlev(nlev) ! km 
     real :: tlev(nlev)
-    real :: dz_cm(nlyr)   ! thickness of each layer (cm)
     real :: airdens(nlev) ! # molecules / cm3 at each level
     real :: aircol(nlyr)  ! # molecules / cm2 in each layer
     real :: o2col(nlyr)  

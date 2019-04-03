@@ -14,6 +14,8 @@
 
       module la_srb_mod
 
+      use params_mod, only : DP
+
       implicit none
 
       private
@@ -30,9 +32,9 @@
       integer :: nchebev_term, nchebev_wave
 
       integer :: ila, isrb
-      REAL(8) :: b(3), c(3), d(3), e(3)
-      REAL(8), allocatable :: chebev_ac(:,:)
-      REAL(8), allocatable :: chebev_bc(:,:)
+      REAL(kind=DP) :: b(3), c(3), d(3), e(3)
+      REAL(kind=DP), allocatable :: chebev_ac(:,:)
+      REAL(kind=DP), allocatable :: chebev_bc(:,:)
 
       REAL    :: xslod(nsrb)
       REAL    :: wlsrb(ksrb)
@@ -42,10 +44,10 @@
 
       SUBROUTINE init_srb
 
-      b(:) = (/ 6.8431e-01_8,  2.29841e-01_8,  8.65412e-02_8 /)
-      c(:) = (/ 8.22114e-21_8, 1.77556e-20_8,  8.22112e-21_8 /)
-      d(:) = (/ 6.0073e-21_8,  4.28569e-21_8,  1.28059e-20_8 /)
-      e(:) = (/ 8.21666e-21_8, 1.63296e-20_8,  4.85121e-17_8 /)
+      b(:) = (/ 6.8431e-01_DP,  2.29841e-01_DP,  8.65412e-02_DP /)
+      c(:) = (/ 8.22114e-21_DP, 1.77556e-20_DP,  8.22112e-21_DP /)
+      d(:) = (/ 6.0073e-21_DP,  4.28569e-21_DP,  1.28059e-20_DP /)
+      e(:) = (/ 8.21666e-21_DP, 1.63296e-20_DP,  4.85121e-17_DP /)
       xslod(:) = (/6.2180730E-21, 5.8473627E-22, 5.6996334E-22, &
                    4.5627094E-22, 1.7668250E-22, 1.1178808E-22, &
                    1.2040544E-22, 4.0994668E-23, 1.8450616E-23, &
@@ -210,12 +212,12 @@
 !     ... local variables
 !-----------------------------------------------------------------------------
       REAL, parameter    :: xsmin = 1.e-20
-      REAL(8), parameter :: rmmin = 1.e-100_8
+      REAL(kind=DP), parameter :: rmmin = 1.e-100_DP
 
       INTEGER :: k, kp1, wn
-      REAL(8) :: o2_col
-      REAL(8) :: rm(nlyr), ro2(nlyr)
-      REAL(8) :: rm_wrk(3), ro2_wrk(3)
+      REAL(kind=DP) :: o2_col
+      REAL(kind=DP) :: rm(nlyr), ro2(nlyr)
+      REAL(kind=DP) :: rm_wrk(3), ro2_wrk(3)
 
       do wn = 1,nla
         dto2la(:nlyr,wn) = 0.
@@ -224,10 +226,10 @@
 !-----------------------------------------------------------------------------
 ! calculate reduction factors at every layer
 !-----------------------------------------------------------------------------
-      rm(:nlyr)  = 0._8
-      ro2(:nlyr) = 0._8
+      rm(:nlyr)  = 0._DP
+      ro2(:nlyr) = 0._DP
       DO k = 1, nlyr
-        o2_col = real( o2col(k),8 )
+        o2_col = real( o2col(k),DP )
         rm_wrk(:)  = b(:) * EXP( -c(:) * o2_col )
         ro2_wrk(:) = d(:) * EXP( -e(:) * o2_col )
         rm(k)  = sum( rm_wrk )
@@ -246,7 +248,7 @@
             o2xsla(k,1) = xsmin
           ENDIF
 
-          IF (rm(kp1) > 0._8) THEN
+          IF (rm(kp1) > 0._DP) THEN
             dto2la(k,1) = LOG( rm(kp1) )/secchi(kp1)  &
                         - LOG( rm(k))   /secchi(k)
           ELSE
@@ -461,7 +463,7 @@
 !-------------------------------------------------------------
       INTEGER, intent(in) :: m
       REAL,    intent(in) :: a, b, x
-      REAL(8), intent(in) :: c(:)
+      REAL(kind=DP), intent(in) :: c(:)
 
 !-------------------------------------------------------------
 !       ... local variables
@@ -478,10 +480,10 @@
         y2 = 2.*y
         DO J = m,2,-1
           sv = d
-          d  = y2*d - dd + real( c(J),4 )
+          d  = y2*d - dd + real( c(J) )
           dd = sv
         END DO
-        chebev = y*d - dd + 0.5*real( c(1),4 )
+        chebev = y*d - dd + 0.5*real( c(1) )
       ENDIF
 	
       END FUNCTION chebev

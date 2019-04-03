@@ -107,7 +107,7 @@
       REAL x(n), y(n), xg(ng)
 
 ! output:
-      REAL yg(ng)
+      REAL yg(ng-1)
 
 ! local:
       REAL area, xgl, xgu
