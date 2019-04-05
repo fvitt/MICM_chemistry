@@ -12,7 +12,7 @@
 !_________________________________________________
 ! altitude, wavelength, time (or solar zenith angle) grids
 ! altitude
-!      integer, PARAMETER :: kz=125
+      integer, PARAMETER :: kz=125
 ! wavelength
       integer, PARAMETER :: kw=1000
 ! time/sza

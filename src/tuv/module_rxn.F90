@@ -3523,10 +3523,12 @@
       SUBROUTINE readit
 !** cross sections from JPL97 recommendation.  Same in JPL-2011.
 
-      real    :: xsav(119)
       integer :: n
-      n = 119
-      
+      real    :: xsav(kz)
+
+      integer, parameter :: nsav = 119
+
+      n = nsav
       CALL base_read( filespec=trim(input_data_root)//'/DATAJ1/ABS/ClONO2_jpl97.abs', &
                       skip_cnt=2,rd_cnt=n,x=x1,y=y1,y1=y2,y2=y3 )
       xsav(1:n) = x1(1:n)
@@ -3535,11 +3537,11 @@
       CALL add_pnts_inter2(x1,y1,yg1,kdata,n, &
                            nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
 
-      x1(1:n) = xsav(1:n)
+      n = nsav ; x1(1:n) = xsav(1:n)
       CALL add_pnts_inter2(x1,y2,yg2,kdata,n, &
                            nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
 
-      x1(1:n) = xsav(1:n)
+      n = nsav ; x1(1:n) = xsav(1:n)
       CALL add_pnts_inter2(x1,y3,yg3,kdata,n, &
                            nw,wl,xsqy_tab(j)%label,deltax,(/0.,0./))
 
