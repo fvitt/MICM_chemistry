@@ -149,7 +149,7 @@ contains
 !! | local_name | standard_name             | long_name                 | units   | rank | type      | kind      | intent | optional |
 !! |------------|---------------------------|---------------------------|---------|------|-----------|-----------|--------|----------|
 !! | nlevels    | num_levels_for_photolysis | number of column layers   | count   |    0 | integer   |           | in     | F        |
-!! ! input_root | tuv_inputdata_root        | root dir for TUV inputs   | none    |    0 | character | len=*     | in    | F        |
+!! | input_root | tuv_inputdata_root        | root dir for TUV inputs   | none    |    0 | character | len=512   | in     | F        |
 !! | errmsg     | ccpp_error_message        | CCPP error message        | none    |    0 | character | len=512   | out    | F        |
 !! | errflg     | ccpp_error_flag           | CCPP error flag           | flag    |    0 | integer   |           | out    | F        |
 !!
@@ -157,7 +157,7 @@ contains
     use params_mod, only: input_data_root
 
     integer, intent(in) :: nlevels
-    character(len=*),   intent(in ) :: input_root
+    character(len=512), intent(in ) :: input_root
     character(len=512), intent(out) :: errmsg
     integer,            intent(out) :: errflg
 
